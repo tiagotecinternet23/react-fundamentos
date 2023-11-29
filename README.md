@@ -1,6 +1,8 @@
 # Fundamentos de React
 
-## Informações gerais
+## 00-projeto-resetado
+
+### Informações gerais
 
 A renderização ocorre na seguinte sequencia:
 
