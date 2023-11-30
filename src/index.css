@@ -38,3 +38,7 @@ body {
   padding: 4px;
   border-radius: 4px;
 }
+
+.centralizar {
+  text-align: center;
+}
