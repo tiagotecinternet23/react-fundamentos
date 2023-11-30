@@ -8,7 +8,11 @@ function Cabecalho() {
   return (
     <header>
       <h1>
-        Olá <span className={estilos.sombra}>React!</span> 😎
+        {/* DESAFIO: troque pelo 'destaque-texto'
+        do Cabecalho.module.css. Utilize a sintaxe
+        de acesso com estilos["nome-da-classe"] */}
+        <span className={estilos["destaque-texto"]}>Olá</span>
+        <span className={estilos.sombra}>React!</span> 😎
       </h1>
       <hr />
       <Menu />
