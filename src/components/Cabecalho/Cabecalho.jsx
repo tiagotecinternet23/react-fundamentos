@@ -1,4 +1,4 @@
-import Menu from "./Menu";
+import Menu from "../Menu";
 
 /* Importação do módulo CSS como um objeto
 chamado estilos (o nome é a seu critério) */
