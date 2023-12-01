@@ -28,3 +28,15 @@ Transforme o `<Rodape>` em um componente estilizado chamado `StyledRodape` com a
 - Plano de fundo com gradiente/degrade de cores de sua preferência
 - Altura de `30vh`
 - Recursos do flex para alinhamento centralizado total
+
+#### 📢 DESAFIO DE REFATORAÇÃO
+
+- Separe o componente estilizado (`StyledRodape`) do componente principal (`Rodape`)
+
+- Você pode criar dentro do `src` uma nova pasta chamada `styles`, e nela criar um arquivo `styles.js` (ou outros nomes de sua preferência)
+
+- No arquivo `styles.js`, importe a `lib` `styled-components`, tire a `const StyledRodape` do `Rodape.jsx` e a coloque aqui no `styles.js`.
+
+- Em seguida, exporte esta `const` sem usar `default`.
+
+- Volte para o componente `Rodape.jsx`, substitua o import do styled-component pelo import do styles.js trazendo a const `StyledMenu`
