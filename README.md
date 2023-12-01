@@ -1,5 +1,11 @@
 # Fundamentos de React
 
+## 05-styled-components
+
+`npm install styled-components`
+
+---
+
 ## Resumo/Revisão
 
 JSX -> HTML + JS para criar componentes
