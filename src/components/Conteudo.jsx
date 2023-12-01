@@ -18,10 +18,10 @@ const StyledConteudo = styled.main`
     .artigos {
       display: flex;
       justify-content: space-between;
-    }
 
-    .artigos article {
-      width: 32%;
+      & article {
+        width: 32%;
+      }
     }
   }
 `;
