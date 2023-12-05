@@ -39,9 +39,15 @@ function Conteudo() {
       </p>
 
       <div className="artigos">
-        <Artigo />
-        <Artigo />
-        <Artigo />
+        <Artigo titulo="Senhor dos Anéis" descricao="Livro criado por Tokien" />
+        <Artigo
+          titulo="Game Of Thrones"
+          descricao="Aventura maluca com gente sempre morrendo"
+        />
+        <Artigo
+          titulo="HTML5 e CSS3"
+          descricao="Fonte de estudos para quem quer começar no Front-End"
+        />
       </div>
     </StyledConteudo>
   );
