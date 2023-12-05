@@ -19,10 +19,12 @@ const StyledConteudo = styled.main`
   @media screen and (min-width: 650px) {
     .artigos {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
+      flex-wrap: wrap;
 
       & article {
-        width: 32%;
+        width: 48%;
+        margin: 1%;
       }
     }
   }
@@ -44,6 +46,7 @@ function Conteudo() {
         {cursos.map((curso) => {
           return (
             <Artigo
+              key={curso.id}
               categoria={curso.categoria}
               titulo={curso.titulo}
               preco={curso.preco}

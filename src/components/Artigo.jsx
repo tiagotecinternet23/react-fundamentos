@@ -20,11 +20,18 @@ const StyledArtigo = styled.article`
 `;
 
 function Artigo(props) {
+  const formatarPreco = (valor) => {
+    return valor.toLocaleString("pt-br", {
+      style: "currency",
+      currency: "BRL",
+    });
+  };
+
   return (
     <StyledArtigo>
       <h3> {props.categoria} </h3>
       <p> {props.titulo} </p>
-      <p> {props.preco} </p>
+      <p> {formatarPreco(props.preco)} </p>
     </StyledArtigo>
   );
 }
