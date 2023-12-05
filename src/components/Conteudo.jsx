@@ -1,11 +1,8 @@
-/* Conteudo.jsx */
+/* Importação dos dados da "api de mentirinha" */
+import cursos from "../api/cursos";
+
 import Artigo from "./Artigo";
 import styled from "styled-components";
-
-/* Importando os assets de imagem */
-import imagem1 from "../assets/abra-o-livro.png";
-import imagem2 from "../assets/livro-magico.png";
-import imagem3 from "../assets/pilha-de-livros.png";
 
 const StyledConteudo = styled.main`
   width: 90vw;
@@ -32,8 +29,6 @@ const StyledConteudo = styled.main`
 `;
 
 function Conteudo() {
-  const datas = ["10/10/1954", "01/01/1995", "15/12/2012"];
-
   return (
     <StyledConteudo>
       <h2>Conteúdo da aplicação</h2>
@@ -46,56 +41,15 @@ function Conteudo() {
       </p>
 
       <div className="artigos">
-        <Artigo
-          imagem={imagem1}
-          data={datas[0]}
-          icone="🎃"
-          titulo="Senhor dos Anéis"
-          descricao="Livro criado por Tokien"
-        >
-          <h4>Volumes</h4>
-          <ul>
-            <li>A Sociedade do Anél</li>
-            <li>As Duas Torres</li>
-            <li>O Retorno do Rei</li>
-          </ul>
-        </Artigo>
-
-        <Artigo
-          imagem={imagem2}
-          data={datas[1]}
-          icone="🎨"
-          titulo="Game Of Thrones"
-          descricao="Aventura maluca com gente sempre morrendo"
-        >
-          <h4>Defuntos do livro</h4>
-          <ol>
-            <li>Aquele cara Stark</li>
-            <li>Outra pessoa importante</li>
-            <li>Mais uma pessoa surpreendente</li>
-          </ol>
-        </Artigo>
-
-        <Artigo
-          imagem={imagem3}
-          data={datas[2]}
-          icone="💎"
-          titulo="HTML5 e CSS3"
-          descricao="Fonte de estudos para quem quer começar no Front-End"
-        >
-          <section>
-            <h4>Assuntos</h4>
-            <details>
-              <summary>Estrutura</summary>
-              <p>HTML5 para estruturar e etc...</p>
-            </details>
-
-            <details>
-              <summary>Estilização</summary>
-              <p>CSS3 para formatar e etc...</p>
-            </details>
-          </section>
-        </Artigo>
+        {cursos.map((curso) => {
+          return (
+            <Artigo
+              categoria={curso.categoria}
+              titulo={curso.titulo}
+              preco={curso.preco}
+            />
+          );
+        })}
       </div>
     </StyledConteudo>
   );

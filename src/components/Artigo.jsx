@@ -19,25 +19,12 @@ const StyledArtigo = styled.article`
   }
 `;
 
-/* Definindo props para o componente */
-function Artigo({ imagem, icone, titulo, descricao, data, children }) {
+function Artigo(props) {
   return (
     <StyledArtigo>
-      <p className="centralizar">
-        <img src={imagem} alt="" />
-      </p>
-
-      <h3>
-        <span>{icone}</span> {titulo}
-      </h3>
-
-      <p> {descricao} </p>
-
-      <p>
-        <b>Lançamento:</b> <time>{data}</time>
-      </p>
-
-      {children}
+      <h3> {props.categoria} </h3>
+      <p> {props.titulo} </p>
+      <p> {props.preco} </p>
     </StyledArtigo>
   );
 }
