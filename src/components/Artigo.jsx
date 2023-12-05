@@ -33,8 +33,10 @@ function Artigo(props) {
       </h3>
       <p> {props.descricao} </p>
       <p>
-        Lançamento: <time>{props.data}</time>
+        <b>Lançamento:</b> <time>{props.data}</time>
       </p>
+
+      {props.children}
     </StyledArtigo>
   );
 }
