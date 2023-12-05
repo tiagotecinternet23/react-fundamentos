@@ -39,12 +39,18 @@ function Conteudo() {
       </p>
 
       <div className="artigos">
-        <Artigo titulo="Senhor dos Anéis" descricao="Livro criado por Tokien" />
         <Artigo
+          icone="🎃"
+          titulo="Senhor dos Anéis"
+          descricao="Livro criado por Tokien"
+        />
+        <Artigo
+          icone="🎨"
           titulo="Game Of Thrones"
           descricao="Aventura maluca com gente sempre morrendo"
         />
         <Artigo
+          icone="💎"
           titulo="HTML5 e CSS3"
           descricao="Fonte de estudos para quem quer começar no Front-End"
         />
