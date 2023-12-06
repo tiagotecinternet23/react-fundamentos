@@ -30,8 +30,12 @@ function Artigo(props) {
   return (
     <StyledArtigo>
       <h3> {props.categoria} </h3>
-      <p> {props.titulo} </p>
-      <p> {formatarPreco(props.preco)} </p>
+      <p>
+        <b>Curso:</b> {props.titulo}
+      </p>
+      <p>
+        <b>Preço:</b> {formatarPreco(props.preco)}
+      </p>
     </StyledArtigo>
   );
 }
