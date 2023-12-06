@@ -37,8 +37,8 @@ function Conteudo() {
     alert("Exemplo 2");
   };
 
-  const exemplo3 = () => {
-    alert("Exemplo 3");
+  const exemplo3 = (valor) => {
+    alert("Exemplo 3" + valor);
   };
 
   return (
@@ -62,6 +62,12 @@ function Conteudo() {
       <div className="artigos">
         {cursos.map((curso) => (
           <Artigo
+            /* É necessário criar uma prop para passar a 
+          chamada/referência da função do componente pai */
+            // handleClick={() => { exemplo3(curso.categoria) }}
+            aoClicar={() => {
+              exemplo3(curso.categoria);
+            }}
             key={curso.id}
             categoria={curso.categoria}
             titulo={curso.titulo}
