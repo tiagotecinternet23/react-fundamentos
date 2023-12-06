@@ -43,16 +43,14 @@ function Conteudo() {
       </p>
 
       <div className="artigos">
-        {cursos.map((curso) => {
-          return (
-            <Artigo
-              key={curso.id}
-              categoria={curso.categoria}
-              titulo={curso.titulo}
-              preco={curso.preco}
-            />
-          );
-        })}
+        {cursos.map((curso) => (
+          <Artigo
+            key={curso.id}
+            categoria={curso.categoria}
+            titulo={curso.titulo}
+            preco={curso.preco}
+          />
+        ))}
       </div>
     </StyledConteudo>
   );
