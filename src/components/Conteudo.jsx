@@ -17,6 +17,10 @@ function Conteudo() {
     setCategoria(categoriaEscolhida);
   };
 
+  const limparFiltro = () => {
+    setCategoria(null);
+  };
+
   /* Gerando um novo array de cursos filtrados */
   const cursosFiltrados = cursos.filter((curso) => {
     /* Se o state categoria for igual a uma 
@@ -44,6 +48,13 @@ function Conteudo() {
           <button onClick={aplicarFiltro}>Front-End</button>
           <button onClick={aplicarFiltro}>Back-End</button>
           <button onClick={aplicarFiltro}>Design</button>
+          <button onClick={aplicarFiltro}>Mobile</button>
+          <button onClick={aplicarFiltro}>Música</button>
+          <button onClick={aplicarFiltro}>Gastronomia</button>
+
+          {categoria && (
+            <button onClick={limparFiltro}>🧹 Limpar filtro</button>
+          )}
         </p>
 
         {/* Renderização Condicional
