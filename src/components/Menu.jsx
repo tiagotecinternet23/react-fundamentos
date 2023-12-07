@@ -1,6 +1,16 @@
 /* Menu.jsx */
 import styled from "styled-components";
 
+function Menu() {
+  return (
+    <StyledMenu>
+      <a href="/">Home</a>
+      <a href="/produtos">Produtos</a>
+      <a href="/contato">Contato</a>
+    </StyledMenu>
+  );
+}
+
 const StyledMenu = styled.nav`
   height: 50px;
   display: flex;
@@ -18,7 +28,7 @@ const StyledMenu = styled.nav`
     transition: transform 100ms;
 
     /* & -> referência ao
-    seletor pai (a) */
+      seletor pai (a) */
     &:hover {
       background-color: pink;
       color: black;
@@ -26,15 +36,5 @@ const StyledMenu = styled.nav`
     }
   }
 `;
-
-function Menu() {
-  return (
-    <StyledMenu>
-      <a href="">Home</a>
-      <a href="">Produtos</a>
-      <a href="">Contato</a>
-    </StyledMenu>
-  );
-}
 
 export default Menu;
