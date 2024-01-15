@@ -7,7 +7,17 @@ function Produtos() {
   const [produtos, setProdutos] = useState([]);
 
   /* Gerenciando o efeito colateral
-  do componente para o carregamento dos dados da API. */
+  do componente para o carregamento dos dados da API. 
+  
+  Fluxo geral de funcionamento do código abaixo:
+
+  1) useEffect é carregado UMA VEZ e APÓS a montagem da page (Produtos)
+  Obs.: o [] indica que o useEffect não tem dependências adicionais
+  e que será executado somente UMA VEZ.
+
+  2) Em seguida, ele executa a função carregarDados
+  3) Ao término dela, atualiza o state (produtos)  */
+
   useEffect(() => {
     const carregarDados = async () => {
       try {
