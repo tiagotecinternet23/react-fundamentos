@@ -40,7 +40,6 @@ function DetalhesProduto() {
             <b>Preço: </b> {produto.price}
           </p>
           <p> {produto.description} </p>
-
           <img src={produto.image} alt="" style={{ width: "300px" }} />
         </>
       )}
