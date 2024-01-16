@@ -8,6 +8,7 @@ import Container from "./components/Container";
 
 /* Importação de recursos/componentes do React Router */
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import DetalhesProduto from "./pages/DetalhesProduto";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Routes>
             <Route Component={Home} exact path="/" />
             <Route Component={Produtos} path="/produtos" />
+            <Route Component={DetalhesProduto} path="/produtos/:id" />
             <Route Component={Contato} path="/contato" />
           </Routes>
         </Container>
