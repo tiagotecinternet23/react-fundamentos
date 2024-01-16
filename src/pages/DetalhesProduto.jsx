@@ -1,7 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 function DetalhesProduto() {
+  const [produto, setProduto] = useState({});
+
   /* Usamos o hook useParams do React Router DOM
   para ter acesso aos parâmetros da rota dinâmica 
   neste caso, o parâmetro chamado "id". */
@@ -12,6 +14,7 @@ function DetalhesProduto() {
       try {
         const resposta = await fetch(`https://fakestoreapi.com/products/${id}`);
         const dados = await resposta.json();
+        setProduto(dados);
       } catch (error) {
         console.error("Erro ao carregar produto: " + error);
       }
@@ -22,15 +25,16 @@ function DetalhesProduto() {
 
   return (
     <article>
-      <h2>Título...</h2>
+      <h2> {produto.title} </h2>
       <p>
-        <b>Categoria: </b> categoria....
+        <b>Categoria: </b> {produto.category}
       </p>
       <p>
-        <b>Preço: </b> preço....
+        <b>Preço: </b> {produto.price}
       </p>
-      <p>Descrição...</p>
-      <img src="" alt="" />
+      <p> {produto.description} </p>
+
+      <img src={produto.image} alt="" style={{ width: "300px" }} />
     </article>
   );
 }
